@@ -15,7 +15,7 @@ turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Move at a moderate speed, not too fast.
+tina.speed(5)                           # Move at a moderate speed, not too fast.
 
 ##
 ## Move Tina to the Starting Position
@@ -66,6 +66,8 @@ tina.end_fill()
 tina.penup()                            # Lift the pen up so we can move tina without drawing
 tina.goto(-30, -130)                    # Move to where the text should appear
 tina.write("Why, hello there!")         # Write the message "Why, hello there!"
+
+tina.goto(-50, -124)
 
 turtle.exitonclick()                    # Close the window when we click on it
 
