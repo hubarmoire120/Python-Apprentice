@@ -29,23 +29,26 @@ tina.pendown()                          # Put the pen down so we can draw
 ## Draw a Square
 ## Repeat forward + right three more times to complete the square.
 ##
-
-tina.pencolor('blue')                   # Set the pen color to blue
+tina.begin_fill()
+tina.color('blue')                   # Set the pen color to blue
 tina.forward(200)                       # Move tina forward by the forward distance
 tina.right(90)                          # Turn tina right by 90 degrees
 
-tina.pencolor('red')                    # Set the pen color to red
+                    # Set the pen color to red
+tina.forward(200)
+tina.right(90)
+tina.end_fill()
+
+tina.begin_fill()           # Set the pen color to green
+tina.color('green')
+tina.forward(200)
+tina.right(120)
+
+                # Set the pen color to purple
 tina.forward(200)
 tina.right(90)
 
-tina.pencolor('green')                  # Set the pen color to green
-tina.forward(200)
-tina.right(90)
-
-tina.pencolor('purple')                 # Set the pen color to purple
-tina.forward(200)
-tina.right(90)
-
+tina.end_fill()
 ##
 ## Draw a Circle
 ##
@@ -59,9 +62,33 @@ tina.begin_fill()
 tina.circle(75)
 tina.end_fill()
 
-##
-## Write a Message
-##
+tina.penup()
+tina.goto(15, 12)   
+tina.pendown()
+
+tina.color ('purple')                # Set the color of tina to red
+tina.begin_fill()
+tina.circle(75)
+tina.end_fill()
+tina.penup()
+tina.goto(-150, 150)
+tina.pendown()
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+tina.right(15)
+for i in range (6):
+    # if i %2 ==1:
+    #      tina.color ('yellow')
+    # else: 
+    #     tina.color('red')
+    tina.color( colors[i ])
+    tina.penup()
+    tina.goto (-150+i*50, 150)
+    tina.pendown()
+    tina.begin_fill()
+    tina.circle(radius = 50, steps=4)
+    tina.end_fill()
+
+
 
 tina.penup()                            # Lift the pen up so we can move tina without drawing
 tina.goto(-30, -130)                    # Move to where the text should appear
