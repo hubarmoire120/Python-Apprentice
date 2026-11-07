@@ -88,13 +88,21 @@ for i in range (6):
     tina.circle(radius = 50, steps=4)
     tina.end_fill()
 
+tina.penup()
+tina.color("yellow")
+tina.goto(-250, 100)
+tina.pendown()
+tina.begin_fill()
+tina.circle(radius = 60, steps=5)
+tina.end_fill()
 
-
+tina.color("black")
 tina.penup()                            # Lift the pen up so we can move tina without drawing
 tina.goto(-30, -130)                    # Move to where the text should appear
 tina.write("Why, hello there!")         # Write the message "Why, hello there!"
 
 tina.goto(-50, -124)
+
 
 turtle.exitonclick()                    # Close the window when we click on it
 
